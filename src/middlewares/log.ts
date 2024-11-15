@@ -7,6 +7,6 @@ import { NextFunction } from "express";
 
 //but in ts, we do it here cpz this is a normal ts function
 export function logger(req:Request, res:Response, next:NextFunction) {
-   console.log(`${req.method} ${req.ip} ${(req as any).originalUrl}`);
+   console.log(`${req.timestamp} ${req.method} ${req.ip} ${(req as any).originalUrl}`);
    next();
 };

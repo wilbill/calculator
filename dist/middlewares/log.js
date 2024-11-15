@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.logger = logger;
 //but in ts, we do it here cpz this is a normal ts function
 function logger(req, res, next) {
-    console.log(`${req.method} ${req.ip} ${req.originalUrl}`);
+    console.log(`${req.timestamp} ${req.method} ${req.ip} ${req.originalUrl}`);
     next();
 }
 ;
